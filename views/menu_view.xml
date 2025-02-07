@@ -1,0 +1,17 @@
+<odoo>
+    <menuitem id="taller_menu_root" name="Taller Mecánico"/>
+    <menuitem id="taller_menu_personas" name="Personas" parent="taller_menu_root" action="action_persona_list"/>
+    <menuitem id="taller_menu_clientes" name="Clientes" parent="taller_menu_root" action="action_cliente_list"/>
+
+    <record id="action_persona_list" model="ir.actions.act_window">
+        <field name="name">Personas</field>
+        <field name="res_model">taller.persona</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="action_cliente_list" model="ir.actions.act_window">
+        <field name="name">Clientes</field>
+        <field name="res_model">taller.cliente</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo>

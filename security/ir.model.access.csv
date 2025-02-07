@@ -1,2 +1,5 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-
+access_odooproyecto_persona_user,Acceso Usuario Persona,model_odooproyecto_persona,group_odooproyecto_user,1,0,0,0
+access_odooproyecto_cliente_user,Acceso Usuario Cliente,model_odooproyecto_cliente,group_odooproyecto_user,1,0,0,0
+access_odooproyecto_persona_admin,Acceso Admin Persona,model_odooproyecto_persona,group_odooproyecto_admin,1,1,1,1
+access_odooproyecto_cliente_admin,Acceso Admin Cliente,model_odooproyecto_cliente,group_odooproyecto_admin,1,1,1,1

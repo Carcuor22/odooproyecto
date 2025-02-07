@@ -1,34 +1,16 @@
-# -*- coding: utf-8 -*-
 {
-    'name': "banco",
-
-    'summary': """
-        Un banco""",
-
-    'description': """
-      Un banco
-    """,
-
-    'author': "My Company",
-    'website': "http://www.yourcompany.com",
-
-    # Categories can be used to filter modules in modules listing
-    # Check https://github.com/odoo/odoo/blob/14.0/odoo/addons/base/data/ir_module_category_data.xml
-    # for the full list
-    'category': 'Uncategorized',
+    'name': "taller_mecanico",
+    'summary': "Módulo para gestión de clientes en talleres mecánicos",
+    'description': "Gestión de clientes en un taller mecánico con herencia de Persona",
+    'author': "Tu Nombre",
+    'website': "http://www.taller-mecanico.com",
+    'category': 'Services',
     'version': '0.1',
-
-    # any module necessary for this one to work correctly
     'depends': ['base'],
-
-    # always loaded
     'data': [
         'security/ir.model.access.csv',
-        'views/banco_view.xml',
-        'views/menu_view.xml',
-    ],
-    # only loaded in demonstration mode
-    'demo': [
-        'demo/demo.xml',
+        'views/personas_view.xml',
+        'views/clientes_view.xml',
+        'views/menu.xml',
     ],
 }
