@@ -6,8 +6,8 @@
     <menuitem id="menu_personas" name="Personas" parent="menu_odooproyecto_root"/>
 
     <!-- Submenús dentro de Personas -->
-    <menuitem id="menu_clientes" name="Clientes" parent="menu_personas" action="action_cliente"/>
-    <menuitem id="menu_mecanicos" name="Mecánicos" parent="menu_personas" action="action_mecanico"/>
+ <menuitem id="menu_clientes" name="Clientes" parent="menu_personas" action="odooproyecto.action_cliente"/>
+    <menuitem id="menu_mecanicos" name="Mecánicos" parent="menu_personas" action="odooproyecto.action_mecanico"/>
 
     <!-- Otros menús -->
     <menuitem id="menu_vehiculos" name="Vehículos" parent="menu_odooproyecto_root" action="action_vehiculo"/>
