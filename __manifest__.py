@@ -18,6 +18,7 @@
         'security/ir.model.access.csv',
 
         # Vistas principales
+        'views/menu_views.xml',
         'views/persona_view.xml',
         'views/mecanico_view.xml',
         'views/cliente_views.xml',
@@ -33,7 +34,6 @@
         # Informes
         'reports/informe.xml',
 
-        'views/menu_views.xml',
     ],
 
     'demo': [

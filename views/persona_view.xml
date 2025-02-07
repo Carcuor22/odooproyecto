@@ -29,7 +29,8 @@
         </field>
     </record>
 
-    <menuitem id="menu_persona" name="Personas" parent="menu_odooproyecto_root" sequence="10"/>
+    <menuitem id="menu_persona" name="Personas" parent="menu_personas" sequence="10"/>
+
 
     
     <record id="action_persona" model="ir.actions.act_window">
