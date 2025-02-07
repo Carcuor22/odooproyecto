@@ -1,38 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
-    <record id="view_mecanico_form" model="ir.ui.view">
-        <field name="name">odooproyecto.mecanico.form</field>
-        <field name="model">odooproyecto.mecanico</field>
-        <field name="arch" type="xml">
-            <form string="Mecánico">
-                <sheet>
-                    <group>
-                        <field name="nif"/>
-                        <field name="nombre"/>  <!-- Campo heredado de Persona -->
-                        <field name="correo"/>  <!-- Campo heredado de Persona -->
-                        <field name="direccion"/>  <!-- Campo heredado de Persona -->
-                        <field name="telefono"/>  <!-- Campo heredado de Persona -->
-                        <field name="especializacion"/>  <!-- Propio de Mecanico -->
-                        <field name="salario"/>  <!-- Propio de Mecanico -->
-                        <field name="foto"/>  <!-- Propio de Mecanico -->
-                        <field name="fecha_contratacion"/>  <!-- Propio de Mecanico -->
-                    </group>
-                </sheet>
-            </form>
-        </field>
-    </record>
+  <!-- Vista Formulario para Mecánicos -->
+  <record id="view_mecanico_form" model="ir.ui.view">
+    <field name="name">odooproyecto.mecanico.form</field>
+    <field name="model">odooproyecto.mecanico</field>
+    <field name="arch" type="xml">
+      <form string="Mecánico">
+        <sheet>
+          <!-- Grupo de campos heredados de Persona -->
+          <group string="Datos de Persona">
+            <field name="nombre"/>
+            <field name="correo"/>
+            <field name="direccion"/>
+            <field name="telefono"/>
+          </group>
+          <!-- Grupo de campos propios de Mecánico -->
+          <group string="Datos de Mecánico">
+            <field name="especializacion"/>
+            <field name="salario"/>
+            <field name="foto"/>
+            <field name="fecha_contratacion"/>
+          </group>
+        </sheet>
+      </form>
+    </field>
+  </record>
 
-    <record id="view_mecanico_tree" model="ir.ui.view">
-        <field name="name">odooproyecto.mecanico.tree</field>
-        <field name="model">odooproyecto.mecanico</field>
-        <field name="arch" type="xml">
-            <tree string="Mecánicos">
-                <field name="nif"/>
-                <field name="nombre"/>  <!-- Campo heredado de Persona -->
-                <field name="especializacion"/>  <!-- Propio de Mecanico -->
-                <field name="telefono"/>  <!-- Campo heredado de Persona -->
-                <field name="salario"/>  <!-- Propio de Mecanico -->
-            </tree>
-        </field>
-    </record>
+  <!-- Vista Árbol para Mecánicos -->
+  <record id="view_mecanico_tree" model="ir.ui.view">
+    <field name="name">odooproyecto.mecanico.tree</field>
+    <field name="model">odooproyecto.mecanico</field>
+    <field name="arch" type="xml">
+      <tree string="Mecánicos">
+        <field name="nombre"/>
+        <field name="especializacion"/>
+        <field name="telefono"/>
+        <field name="salario"/>
+      </tree>
+    </field>
+  </record>
+
+  <!-- Acción para abrir la vista de Mecánicos -->
+  <record id="action_mecanico" model="ir.actions.act_window">
+    <field name="name">Mecánicos</field>
+    <field name="res_model">odooproyecto.mecanico</field>
+    <field name="view_mode">tree,form</field>
+    <field name="view_id" ref="view_mecanico_tree"/>
+  </record>
+
+  <!-- Menú de Mecánicos (dentro del menú Personas) -->
+  <menuitem id="menu_mecanicos" name="Mecánicos" parent="menu_personas" action="action_mecanico" sequence="10"/>
 </odoo>

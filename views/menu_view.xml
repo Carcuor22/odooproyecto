@@ -1,8 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <odoo>
     <!-- Menú Principal del Módulo -->
     <menuitem id="menu_odooproyecto_root" name="Gestión de Taller Mecánico" sequence="1"/>
 
-    <!-- Menú Personas (Ahora tiene un parent) -->
+    <!-- Menú Personas -->
     <menuitem id="menu_personas" name="Gestión de Personas" parent="menu_odooproyecto_root" sequence="2"/>
 
     <!-- Submenús dentro de Personas -->
