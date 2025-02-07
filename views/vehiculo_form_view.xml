@@ -1,0 +1,20 @@
+<odoo>
+    <record id="view_vehiculo_form" model="ir.ui.view">
+        <field name="name">vehiculo.form</field>
+        <field name="model">taller.vehiculo</field>
+        <field name="arch" type="xml">
+            <form string="Vehículo">
+                <sheet>
+                    <group>
+                        <field name="matricula"/>
+                        <field name="marca"/>
+                        <field name="modelo"/>
+                        <field name="motor"/>
+                        <field name="foto" widget="image"/>
+                        <field name="cliente_id"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>
