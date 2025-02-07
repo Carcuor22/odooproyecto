@@ -17,8 +17,8 @@
     'depends': ['base'],  # Dependencia de los módulos básicos de Odoo
     'data': [
         'security/ir.model.access.csv',
-        'views/modelo_padre_views.xml',
-        'views/modelo_hijo1_views.xml',
+        'views/persona_view.xml',
+        'views/mecanico_view.xml',
         'views/modelo_hijo2_views.xml',
         'views/otros_modelos_views.xml',
         'data/demo_data.xml',

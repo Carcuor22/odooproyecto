@@ -1,7 +1,7 @@
 from odoo import models, fields
 
 class Persona(models.Model):
-    _name = 'taller.persona'
+    _name = 'odooproyecto.persona'
     _description = 'Persona'
 
     nif = fields.Char(string="NIF", required=True)

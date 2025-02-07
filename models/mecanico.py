@@ -1,8 +1,8 @@
 from odoo import models, fields
 
 class Mecanico(models.Model):
-    _name = 'taller.mecanico'
-    _inherit = 'taller.persona'
+    _name = 'odooproyecto.mecanico'
+    _inherit = 'odooproyecto.persona'
     _description = 'Mecánico'
 
     especializacion = fields.Selection(
