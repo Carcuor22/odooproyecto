@@ -1,0 +1,46 @@
+<odoo>
+    <record id="view_mecanico_form" model="ir.ui.view">
+        <field name="name">mecanico.form</field>
+        <field name="model">odooproyecto.mecanico</field>
+        <field name="arch" type="xml">
+            <form string="Mecánico">
+                <sheet>
+                    <group>
+                        <field name="nif"/>
+                        <field name="nombre"/>
+                        <field name="correo"/>
+                        <field name="direccion"/>
+                        <field name="telefono"/>
+                        <field name="especializacion"/>
+                        <field name="salario"/>
+                        <field name="foto"/>
+                        <field name="fecha_contratacion"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_mecanico_tree" model="ir.ui.view">
+        <field name="name">mecanico.tree</field>
+        <field name="model">odooproyecto.mecanico</field>
+        <field name="arch" type="xml">
+            <tree string="Mecánicos">
+                <field name="nif"/>
+                <field name="nombre"/>
+                <field name="especializacion"/>
+                <field name="salario"/>
+            </tree>
+        </field>
+    </record>
+
+    <menuitem id="menu_mecanico" name="Mecánicos" parent="base.menu_base_config" sequence="20"/>
+    
+    <record id="action_mecanico" model="ir.actions.act_window">
+        <field name="name">Mecánicos</field>
+        <field name="res_model">odooproyecto.mecanico</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_action_mecanico" name="Mecánicos" parent="menu_mecanico" action="action_mecanico"/>
+</odoo>
