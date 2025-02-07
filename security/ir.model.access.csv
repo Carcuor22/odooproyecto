@@ -2,3 +2,5 @@ id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 access_odooproyecto_odooproyecto,odooproyecto.odooproyecto,model_odooproyecto_odooproyecto,base.group_user,1,1,1,1
 access_odooproyecto_persona,odooproyecto.persona,model_odooproyecto_persona,base.group_user,1,1,1,1
 access_odooproyecto_mecanico,odooproyecto.mecanico,model_odooproyecto_mecanico,base.group_user,1,1,1,1
+
+prukghuirehreiurhiughiurhgurehurhughrhgurhutruhturhtuhru
