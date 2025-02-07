@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="view_persona_tree" model="ir.ui.view">
+        <field name="name">taller.persona.tree</field>
+        <field name="model">taller.persona</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="nif"/>
+                <field name="nombre"/>
+                <field name="correo"/>
+                <field name="telefono"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_persona_form" model="ir.ui.view">
+        <field name="name">taller.persona.form</field>
+        <field name="model">taller.persona</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="nif"/>
+                        <field name="nombre"/>
+                        <field name="correo"/>
+                        <field name="telefono"/>
+                        <field name="direccion"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_persona" model="ir.actions.act_window">
+        <field name="name">Personas</field>
+        <field name="res_model">taller.persona</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_taller_root" name="Taller"/>
+    <menuitem id="menu_persona" name="Personas" parent="menu_taller_root" action="action_persona"/>
+</odoo>
