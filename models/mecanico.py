@@ -1,3 +1,5 @@
+
+
 class Mecanico(models.Model):
     _name = 'odooproyecto.mecanico'
     _description = 'Mecanico'

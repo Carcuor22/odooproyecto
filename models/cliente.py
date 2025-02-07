@@ -1,3 +1,5 @@
+from odoo import models, fields, api
+
 class Cliente(models.Model):
     _name = 'odooproyecto.cliente'
     _description = 'Cliente'
