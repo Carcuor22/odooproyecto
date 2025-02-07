@@ -1,5 +1,23 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <odoo>
+    <record id="action_cliente" model="ir.actions.act_window">
+        <field name="name">Clientes</field>
+        <field name="res_model">odooproyecto.cliente</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="view_cliente_tree" model="ir.ui.view">
+        <field name="name">odooproyecto.cliente.tree</field>
+        <field name="model">odooproyecto.cliente</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="telefono"/>
+                <field name="email"/>
+                <field name="tipo"/>
+            </tree>
+        </field>
+    </record>
+
     <record id="view_cliente_form" model="ir.ui.view">
         <field name="name">odooproyecto.cliente.form</field>
         <field name="model">odooproyecto.cliente</field>
@@ -7,41 +25,13 @@
             <form string="Cliente">
                 <sheet>
                     <group>
-                        <field name="nif"/>
-                        <field name="nombre"/>
-                        <field name="correo"/>
-                        <field name="direccion"/>
+                        <field name="name"/>
                         <field name="telefono"/>
+                        <field name="email"/>
                         <field name="tipo"/>
                     </group>
                 </sheet>
             </form>
         </field>
-    </record>
-
-    <record id="view_cliente_tree" model="ir.ui.view">
-        <field name="name">odooproyecto.cliente.tree</field>
-        <field name="model">odooproyecto.cliente</field>
-        <field name="arch" type="xml">
-            <tree string="Clientes">
-                <field name="nombre"/>
-                <field name="nif"/>
-                <field name="correo"/>
-                <field name="telefono"/>
-                <field name="tipo"/>
-            </tree>
-        </field>
-    </record>
-
-    <menuitem id="menu_odooproyecto_root" name="Odoo Proyecto"/>
-
-    <menuitem id="menu_clientes" name="Clientes" parent="menu_odooproyecto_root"/>
-    
-    <menuitem id="menu_cliente" name="Gestión de Clientes" parent="menu_clientes" action="action_cliente"/>
-    
-    <record id="action_cliente" model="ir.actions.act_window">
-        <field name="name">Clientes</field>
-        <field name="res_model">odooproyecto.cliente</field>
-        <field name="view_mode">tree,form</field>
     </record>
 </odoo>
