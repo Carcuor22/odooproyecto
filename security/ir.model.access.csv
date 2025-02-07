@@ -1,9 +1,2 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_odooproyecto_persona,persona,model_odooproyecto_persona,base.group_user,1,0,0,0
-access_odooproyecto_mecanico,mecanico,model_odooproyecto_mecanico,base.group_user,1,1,1,1
-access_odooproyecto_cliente,cliente,model_odooproyecto_cliente,base.group_user,1,1,1,1
-access_odooproyecto_vehiculo,vehiculo,model_odooproyecto_vehiculo,base.group_user,1,1,1,1
-access_odooproyecto_reparacion,reparacion,model_odooproyecto_reparacion,base.group_user,1,1,1,1
-access_odooproyecto_lineareparacion,lineareparacion,model_odooproyecto_lineareparacion,base.group_user,1,1,1,1
-access_odooproyecto_concepto,concepto,model_odooproyecto_concepto,base.group_user,1,1,1,1
 
