@@ -18,7 +18,7 @@
         'security/ir.model.access.csv',
 
         # Vistas principales
-        'views/menu_views.xml',
+        'views/menu_view.xml',
         'views/persona_view.xml',
         'views/mecanico_view.xml',
         'views/cliente_views.xml',
