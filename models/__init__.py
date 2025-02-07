@@ -5,6 +5,6 @@ from . import mecanico
 from . import cliente
 from . import vehiculo
 from . import reparacion
-from . import lineareparacion
+from . import lineaReparacion
 from . import concepto
 
