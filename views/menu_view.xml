@@ -3,10 +3,11 @@
     <menuitem id="menu_odooproyecto_root" name="Gestión de Taller Mecánico" sequence="1"/>
 
     <!-- Menú Personas (No tiene acción, solo agrupa Cliente y Mecánico) -->
-    <menuitem id="menu_personas" name="Personas" parent="menu_odooproyecto_root"/>
+    <menuitem id="menu_personas" name="Gestión de Personas" sequence="1"/>
+
 
     <!-- Submenús dentro de Personas -->
- <menuitem id="menu_clientes" name="Clientes" parent="menu_personas" action="odooproyecto.action_cliente"/>
+    <menuitem id="menu_clientes" name="Clientes" parent="menu_personas" action="odooproyecto.action_cliente"/>
     <menuitem id="menu_mecanicos" name="Mecánicos" parent="menu_personas" action="odooproyecto.action_mecanico"/>
 
     <!-- Otros menús -->

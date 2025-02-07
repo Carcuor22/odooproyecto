@@ -17,6 +17,9 @@
     'data': [
         'security/ir.model.access.csv',
 
+    # 📌 Luego cargamos el menú (para que no falle)
+        'views/menu_view.xml',
+
         # 📌 Primero cargamos las vistas de los modelos
         'views/persona_view.xml',
         'views/mecanico_view.xml',
@@ -26,8 +29,7 @@
         'views/lineareparacion_views.xml',
         'views/concepto_views.xml',
 
-        # 📌 Luego cargamos el menú (para que no falle)
-        'views/menu_view.xml',
+        
 
         # 📌 Datos de demostración
         'data/demo_data.xml',
