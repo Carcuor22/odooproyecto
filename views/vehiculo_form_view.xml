@@ -1,4 +1,5 @@
 <odoo>
+    <!-- Vista de Formulario para Vehículos -->
     <record id="view_vehiculo_form" model="ir.ui.view">
         <field name="name">vehiculo.form</field>
         <field name="model">taller.vehiculo</field>
@@ -17,4 +18,29 @@
             </form>
         </field>
     </record>
+
+    <!-- Vista de Lista (Tree) para Vehículos -->
+    <record id="view_vehiculo_tree" model="ir.ui.view">
+        <field name="name">vehiculo.tree</field>
+        <field name="model">taller.vehiculo</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="matricula"/>
+                <field name="marca"/>
+                <field name="modelo"/>
+                <field name="motor"/>
+                <field name="cliente_id"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Acción para mostrar los Vehículos -->
+    <record id="action_vehiculo" model="ir.actions.act_window">
+        <field name="name">Vehículos</field>
+        <field name="res_model">taller.vehiculo</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Menú para acceder a Vehículos -->
+    <menuitem id="menu_vehiculos" name="Vehículos" parent="menu_taller_root" action="action_vehiculo"/>
 </odoo>
