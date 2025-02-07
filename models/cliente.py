@@ -5,7 +5,7 @@ class Cliente(models.Model):
     _description = 'Cliente'
     _inherits = {'odooproyecto.persona': 'nif'}  # Hereda los atributos de Persona
 
-    nif = fields.Char(string="NIF", required=True, ondelete='cascade')  # Relacionado con Persona
+    nif = fields.Many2one('odooproyecto.persona', string="NIF", required=True, ondelete='cascade')  # Relacionado con Persona
     tipo = fields.Selection([
         ('empresa', 'Empresa'),
         ('particular', 'Particular'),

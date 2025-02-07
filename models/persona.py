@@ -4,7 +4,7 @@ class Persona(models.Model):
     _name = 'odooproyecto.persona'
     _description = 'Persona'
     
-    nif = fields.Char(string="NIF", required=True)
+    nif = fields.Char(string="NIF", required=True, index=True)  # Solo índice, no 'unique' si se usa _inherits
     nombre = fields.Char(string="Nombre", required=True)
     correo = fields.Char(string="Correo")
     direccion = fields.Char(string="Dirección")
