@@ -5,7 +5,7 @@ class Mecanico(models.Model):
     _description = 'Mecanico'
     _inherits = {'odooproyecto.persona': 'nif'}  # Hereda los atributos de Persona
 
-    nif = fields.Char(string="NIF", required=True)  # Relacionado con Persona
+    nif = fields.Char(string="NIF", required=True, ondelete='cascade')  # Relacionado con Persona
     especializacion = fields.Selection([
         ('mecanica', 'Mecánica'),
         ('electricidad', 'Electricidad'),
