@@ -7,14 +7,14 @@
     <field name="arch" type="xml">
       <form string="Mecánico">
         <sheet>
-          <!-- Grupo de campos heredados de Persona -->
+          <!-- Grupo de campos heredados (del modelo Persona, a través del _inherits) -->
           <group string="Datos de Persona">
             <field name="nombre"/>
             <field name="correo"/>
             <field name="direccion"/>
             <field name="telefono"/>
           </group>
-          <!-- Grupo de campos propios de Mecánico -->
+          <!-- Grupo de campos propios del Mecánico -->
           <group string="Datos de Mecánico">
             <field name="especializacion"/>
             <field name="salario"/>
@@ -26,7 +26,7 @@
     </field>
   </record>
 
-  <!-- Vista Árbol para Mecánicos -->
+  <!-- Vista Árbol (Tree) para Mecánicos -->
   <record id="view_mecanico_tree" model="ir.ui.view">
     <field name="name">odooproyecto.mecanico.tree</field>
     <field name="model">odooproyecto.mecanico</field>
@@ -45,9 +45,14 @@
     <field name="name">Mecánicos</field>
     <field name="res_model">odooproyecto.mecanico</field>
     <field name="view_mode">tree,form</field>
+    <!-- Se puede definir la vista inicial (opcional) -->
     <field name="view_id" ref="view_mecanico_tree"/>
   </record>
 
-  <!-- Menú de Mecánicos (dentro del menú Personas) -->
-  <menuitem id="menu_mecanicos" name="Mecánicos" parent="menu_personas" action="action_mecanico" sequence="10"/>
+  <!-- Menú para Mecánicos -->
+  <menuitem id="menu_mecanicos" 
+            name="Mecánicos" 
+            parent="menu_personas" 
+            action="action_mecanico" 
+            sequence="10"/>
 </odoo>
