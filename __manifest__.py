@@ -1,54 +1,34 @@
+# -*- coding: utf-8 -*-
 {
-    'name': 'Gestión de Taller Mecánico',
-    'version': '1.0',
-    'summary': 'Gestión de taller mecánico: clientes, vehículos, reparaciones y mecánicos',
+    'name': "banco",
+
+    'summary': """
+        Un banco""",
+
     'description': """
-        Módulo de Odoo para gestionar un taller mecánico:
-        - Gestión de clientes y vehículos
-        - Registro de reparaciones
-        - Gestión de mecánicos y líneas de reparación
-        - Informes detallados
+      Un banco
     """,
-    'author': 'Tu Nombre o Grupo',
-    'website': 'https://www.example.com',
-    'category': 'Industries',
-    'depends': ['base'],  # Dependencias necesarias para el módulo
 
+    'author': "My Company",
+    'website': "http://www.yourcompany.com",
+
+    # Categories can be used to filter modules in modules listing
+    # Check https://github.com/odoo/odoo/blob/14.0/odoo/addons/base/data/ir_module_category_data.xml
+    # for the full list
+    'category': 'Uncategorized',
+    'version': '0.1',
+
+    # any module necessary for this one to work correctly
+    'depends': ['base'],
+
+    # always loaded
     'data': [
-    'security/ir.model.access.csv',
-
-    # 📌 Primero se definen las acciones y vistas necesarias
-    
-
-    # 📌 Luego se carga el menú, que hace referencia a esas acciones
-   
-
-    # 📌 Otras vistas
-    'views/persona_view.xml',
-<<<<<<< HEAD
-
-
-=======
-    'views/mecanico_view.xml',
-    'views/cliente_views.xml',
-    'views/vehiculo_form_view.xml',
-    'views/reparacion_views.xml',
-    'views/lineareparacion_views.xml',
-    'views/concepto_views.xml',
->>>>>>> 92a9b2bf9076f9de18b1f303bc6b45a93327ba9d
-
-    # 📌 Datos de demostración
-    'data/demo_data.xml',
-
-    # 📌 Informes
-    'reports/informe.xml',
+        'security/ir.model.access.csv',
+        'views/banco_view.xml',
+        'views/menu_view.xml',
     ],
-
+    # only loaded in demonstration mode
     'demo': [
-        'data/demo_data.xml',
+        'demo/demo.xml',
     ],
-
-    'installable': True,
-    'application': True,
-    'auto_install': False,
 }
