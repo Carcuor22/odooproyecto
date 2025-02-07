@@ -1,34 +1,33 @@
-# -*- coding: utf-8 -*-
+# __manifest__.py
+
 {
-    'name': "odooproyecto",
-
-    'summary': """
-       Aplicacion Odoo para gestionar un taller de coches""",
-
+    'name': 'Taller Mecánico',
+    'version': '1.0',
+    'summary': 'Gestión de taller mecánico: vehículos, reparaciones y mecánicos',
     'description': """
-        Aplicacion Odoo para gestionar un taller de coches
+        Módulo de Odoo para gestionar un taller mecánico:
+        - Gestión de clientes y vehículos
+        - Registro de reparaciones
+        - Gestión de mecánicos y líneas de reparación
+        - Informes detallados
     """,
-
-    'author': "HM",
-    'website': "http://ieshnosmachado.org",
-
-    # Categories can be used to filter modules in modules listing
-    # Check https://github.com/odoo/odoo/blob/14.0/odoo/addons/base/data/ir_module_category_data.xml
-    # for the full list
-    'category': 'Uncategorized',
-    'version': '0.1',
-
-    # any module necessary for this one to work correctly
-    'depends': ['base'],
-
-    # always loaded
+    'author': 'Tu Nombre o Grupo',
+    'website': 'https://www.example.com',
+    'category': 'Industries',
+    'depends': ['base'],  # Dependencia de los módulos básicos de Odoo
     'data': [
         'security/ir.model.access.csv',
-        'views/taller_view.xml',
-        'views/menu_view.xml',
+        'views/modelo_padre_views.xml',
+        'views/modelo_hijo1_views.xml',
+        'views/modelo_hijo2_views.xml',
+        'views/otros_modelos_views.xml',
+        'data/demo_data.xml',
+        'reports/informe.xml',
     ],
-    # only loaded in demonstration mode
     'demo': [
-        'demo/demo.xml',
+        'data/demo_data.xml',
     ],
+    'installable': True,
+    'application': True,
+    'auto_install': False,
 }
