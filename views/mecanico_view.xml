@@ -9,10 +9,11 @@
         <sheet>
           <!-- Grupo de campos heredados (del modelo Persona, a través del _inherits) -->
           <group string="Datos de Persona">
-            <field name="nombre"/>
-            <field name="correo"/>
-            <field name="direccion"/>
-            <field name="telefono"/>
+            <field name="persona_id"/>
+            <field name="persona_id.nombre"/>
+            <field name="persona_id.correo"/>
+            <field name="persona_id.direccion"/>
+            <field name="persona_id.telefono"/>
           </group>
           <!-- Grupo de campos propios del Mecánico -->
           <group string="Datos de Mecánico">
@@ -32,9 +33,9 @@
     <field name="model">odooproyecto.mecanico</field>
     <field name="arch" type="xml">
       <tree string="Mecánicos">
-        <field name="nombre"/>
+        <field name="persona_id.nombre"/>
         <field name="especializacion"/>
-        <field name="telefono"/>
+        <field name="persona_id.telefono"/>
         <field name="salario"/>
       </tree>
     </field>
@@ -45,8 +46,9 @@
     <field name="name">Mecánicos</field>
     <field name="res_model">odooproyecto.mecanico</field>
     <field name="view_mode">tree,form</field>
-    <!-- Se puede definir la vista inicial (opcional) -->
-    <field name="view_id" ref="view_mecanico_tree"/>
+    <field name="help" type="html">
+      <p class="oe_view_nocontent_create">Cree un nuevo mecánico.</p>
+    </field>
   </record>
 
   <!-- Menú para Mecánicos -->

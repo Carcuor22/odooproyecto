@@ -26,6 +26,7 @@
     # 📌 Otras vistas
     'views/persona_view.xml',
     'views/mecanico_view.xml',
+    'views/cliente_views.xml',
     'views/vehiculo_form_view.xml',
     'views/reparacion_views.xml',
     'views/lineareparacion_views.xml',

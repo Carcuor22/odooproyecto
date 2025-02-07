@@ -2,10 +2,10 @@ from odoo import models, fields
 
 class Mecanico(models.Model):
     _name = 'odooproyecto.mecanico'
-    _description = 'Mecanico'
-    _inherits = {'odooproyecto.persona': 'nif'}
-
-    nif = fields.Many2one('odooproyecto.persona', string="NIF", required=True, ondelete='cascade')  # Relacionado con Persona
+    _description = 'Mecánico'
+    _inherits = {'odooproyecto.persona': 'persona_id'}  # Usa un campo intermedio para la relación
+    
+    persona_id = fields.Many2one('odooproyecto.persona', string="Persona", required=True, ondelete='cascade')
     especializacion = fields.Selection([
         ('mecanica', 'Mecánica'),
         ('electricidad', 'Electricidad'),
