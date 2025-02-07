@@ -18,7 +18,6 @@
     'security/ir.model.access.csv',
 
     # 📌 Primero se definen las acciones y vistas necesarias
-    'views/cliente_action.xml',
     'views/cliente_views.xml',
 
     # 📌 Luego se carga el menú, que hace referencia a esas acciones

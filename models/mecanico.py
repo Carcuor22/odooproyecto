@@ -1,15 +1,14 @@
-from odoo import models, fields
-
 class Mecanico(models.Model):
     _name = 'odooproyecto.mecanico'
-    _inherit = 'odooproyecto.persona'
-    _description = 'Mecánico'
+    _description = 'Mecanico'
+    _inherits = {'odooproyecto.persona': 'nif'}  # Hereda los atributos de Persona
 
-    especializacion = fields.Selection(
-        [('mecanica', 'Mecánica'),
-         ('electricidad', 'Electricidad'),
-         ('pintura', 'Pintura')],
-        string="Especialización", required=True)
-    salario = fields.Float(string="Salario", required=True)
+    nif = fields.Char(string="NIF", required=True)  # Relacionado con Persona
+    especializacion = fields.Selection([
+        ('mecanica', 'Mecánica'),
+        ('electricidad', 'Electricidad'),
+        ('pintura', 'Pintura'),
+    ], string="Especialización")
+    salario = fields.Float(string="Salario")
     foto = fields.Binary(string="Foto")
-    fecha_contratacion = fields.Date(string="Fecha de Contratación", required=True)
+    fecha_contratacion = fields.Date(string="Fecha de Contratación")

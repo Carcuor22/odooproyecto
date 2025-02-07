@@ -1,9 +1,12 @@
-from odoo import models, fields
-
 class Cliente(models.Model):
     _name = 'odooproyecto.cliente'
-    _inherit = 'odooproyecto.persona'
     _description = 'Cliente'
+    _inherits = {'odooproyecto.persona': 'nif'}  # Hereda los atributos de Persona
 
-    vehiculo_ids = fields.One2many('odooproyecto.vehiculo', 'cliente_id', string="Vehículos")
-    reparacion_ids = fields.One2many('odooproyecto.reparacion', 'cliente_id', string="Reparaciones")
+    nif = fields.Char(string="NIF", required=True)  # Relacionado con Persona
+    tipo = fields.Selection([
+        ('empresa', 'Empresa'),
+        ('particular', 'Particular'),
+        ('junta', 'Junta Andalucía'),
+        ('organismo', 'Organismo Público'),
+    ], string="Tipo de Cliente")

@@ -3,9 +3,13 @@ from odoo import models, fields
 class Persona(models.Model):
     _name = 'odooproyecto.persona'
     _description = 'Persona'
-
+    
     nif = fields.Char(string="NIF", required=True)
     nombre = fields.Char(string="Nombre", required=True)
-    correo = fields.Char(string="Correo Electrónico")
+    correo = fields.Char(string="Correo")
     direccion = fields.Char(string="Dirección")
-    telefono = fields.Integer(string="Teléfono")
+    telefono = fields.Char(string="Teléfono")
+    
+    _sql_constraints = [
+        ('persona_nif_unique', 'unique(nif)', 'El NIF debe ser único.')
+    ]
