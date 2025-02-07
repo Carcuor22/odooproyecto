@@ -25,13 +25,15 @@
         'views/reparacion_views.xml',
         'views/lineareparacion_views.xml',
         'views/concepto_views.xml',
-        'views/menu_views.xml',
+        
 
         # Datos de demostración
         'data/demo_data.xml',
 
         # Informes
         'reports/informe.xml',
+
+        'views/menu_views.xml',
     ],
 
     'demo': [

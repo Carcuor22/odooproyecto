@@ -2,11 +2,16 @@
     <!-- Menú Principal del Módulo -->
     <menuitem id="menu_odooproyecto_root" name="Gestión de Taller Mecánico" sequence="1"/>
 
-    <!-- Submenús -->
-    <menuitem id="menu_clientes" name="Clientes" parent="menu_odooproyecto_root" action="action_cliente"/>
+    <!-- Menú Personas (No tiene acción, solo agrupa Cliente y Mecánico) -->
+    <menuitem id="menu_personas" name="Personas" parent="menu_odooproyecto_root"/>
+
+    <!-- Submenús dentro de Personas -->
+    <menuitem id="menu_clientes" name="Clientes" parent="menu_personas" action="action_cliente"/>
+    <menuitem id="menu_mecanicos" name="Mecánicos" parent="menu_personas" action="action_mecanico"/>
+
+    <!-- Otros menús -->
     <menuitem id="menu_vehiculos" name="Vehículos" parent="menu_odooproyecto_root" action="action_vehiculo"/>
     <menuitem id="menu_reparaciones" name="Reparaciones" parent="menu_odooproyecto_root" action="action_reparacion"/>
-    <menuitem id="menu_mecanicos" name="Mecánicos" parent="menu_odooproyecto_root" action="action_mecanico"/>
     <menuitem id="menu_lineas_reparacion" name="Líneas de Reparación" parent="menu_odooproyecto_root" action="action_lineareparacion"/>
     <menuitem id="menu_conceptos" name="Conceptos" parent="menu_odooproyecto_root" action="action_concepto"/>
 </odoo>
