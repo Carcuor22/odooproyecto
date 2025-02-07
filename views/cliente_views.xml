@@ -1,35 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
+    <!-- Vista Formulario Cliente -->
     <record id="view_cliente_form" model="ir.ui.view">
         <field name="name">odooproyecto.cliente.form</field>
         <field name="model">odooproyecto.cliente</field>
         <field name="arch" type="xml">
             <form string="Cliente">
                 <sheet>
-                    <group>
-                        <field name="nif"/>
-                        <field name="nombre"/>  <!-- Campo heredado de Persona -->
-                        <field name="correo"/>  <!-- Campo heredado de Persona -->
-                        <field name="direccion"/>  <!-- Campo heredado de Persona -->
-                        <field name="telefono"/>  <!-- Campo heredado de Persona -->
-                        <field name="tipo"/>  <!-- Propio de Cliente -->
-                    </group>
+                    <notebook>
+                        <page string="Información Básica">
+                            <group>
+                                <field name="nif"/>
+                                <field name="nombre"/>  
+                                <field name="correo"/>  
+                                <field name="direccion"/>  
+                                <field name="telefono"/>  
+                                <field name="tipo"/>  
+                            </group>
+                        </page>
+                    </notebook>
                 </sheet>
             </form>
         </field>
     </record>
 
+    <!-- Vista Árbol Cliente -->
     <record id="view_cliente_tree" model="ir.ui.view">
         <field name="name">odooproyecto.cliente.tree</field>
         <field name="model">odooproyecto.cliente</field>
         <field name="arch" type="xml">
             <tree string="Clientes">
                 <field name="nif"/>
-                <field name="nombre"/>  <!-- Campo heredado de Persona -->
-                <field name="tipo"/>  <!-- Propio de Cliente -->
-                <field name="correo"/>  <!-- Campo heredado de Persona -->
-                <field name="telefono"/>  <!-- Campo heredado de Persona -->
+                <field name="nombre"/>
+                <field name="tipo"/>
+                <field name="correo"/>
+                <field name="telefono"/>
             </tree>
         </field>
+    </record>
+
+    <!-- Acción para abrir la vista Cliente -->
+    <record id="action_cliente" model="ir.actions.act_window">
+        <field name="name">Clientes</field>
+        <field name="res_model">odooproyecto.cliente</field>
+        <field name="view_mode">tree,form</field>
     </record>
 </odoo>
