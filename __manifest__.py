@@ -18,7 +18,7 @@
     'data': [
         'security/ir.model.access.csv',
         'views/persona_view.xml',
-        'views/modelo_hijo1_views.xml',
+        'views/mecanico_view.xml',
         'views/modelo_hijo2_views.xml',
         'views/otros_modelos_views.xml',
         'data/demo_data.xml',
