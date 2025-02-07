@@ -1,11 +1,11 @@
-from odoo import models, fields, api
+from odoo import models, fields
 
 class Cliente(models.Model):
     _name = 'odooproyecto.cliente'
     _description = 'Cliente'
-    _inherits = {'odooproyecto.persona': 'nif'}  # Hereda los atributos de Persona
+    _inherits = {'odooproyecto.persona': 'persona_id'}
 
-    nif = fields.Char(string="NIF", required=True, ondelete='cascade')  # Relacionado con Persona
+    persona_id = fields.Many2one('odooproyecto.persona', string="Persona", required=True, ondelete="cascade")
     tipo = fields.Selection([
         ('empresa', 'Empresa'),
         ('particular', 'Particular'),
