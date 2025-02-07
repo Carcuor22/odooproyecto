@@ -1,8 +1,8 @@
 <odoo>
     <!-- Vista de Lista para Líneas de Reparación -->
     <record id="view_lineareparacion_tree" model="ir.ui.view">
-        <field name="name">taller.lineareparacion.tree</field>
-        <field name="model">taller.lineareparacion</field>
+        <field name="name">odooproyecto.lineareparacion.tree</field>
+        <field name="model">odooproyyecto.lineareparacion</field>
         <field name="arch" type="xml">
             <tree>
                 <field name="cantidad"/>
@@ -15,8 +15,8 @@
 
     <!-- Vista de Formulario para Líneas de Reparación -->
     <record id="view_lineareparacion_form" model="ir.ui.view">
-        <field name="name">taller.lineareparacion.form</field>
-        <field name="model">taller.lineareparacion</field>
+        <field name="name">odooproyecto.lineareparacion.form</field>
+        <field name="model">odooproyecto.lineareparacion</field>
         <field name="arch" type="xml">
             <form string="Línea de Reparación">
                 <sheet>
@@ -34,10 +34,10 @@
     <!-- Acción para mostrar las Líneas de Reparación -->
     <record id="action_lineareparacion" model="ir.actions.act_window">
         <field name="name">Líneas de Reparación</field>
-        <field name="res_model">taller.lineareparacion</field>
+        <field name="res_model">odooproyecto.lineareparacion</field>
         <field name="view_mode">tree,form</field>
     </record>
 
     <!-- Menú para acceder a Líneas de Reparación -->
-    <menuitem id="menu_lineas_reparacion" name="Líneas de Reparación" parent="menu_taller_root" action="action_lineareparacion"/>
+    <menuitem id="menu_lineas_reparacion" name="Líneas de Reparación" parent="menu_odooproyecto_root" action="action_lineareparacion"/>
 </odoo>

@@ -2,7 +2,7 @@
     <!-- Vista Tree (Lista) -->
     <record id="view_concepto_tree" model="ir.ui.view">
         <field name="name">concepto.tree</field>
-        <field name="model">taller.concepto</field>
+        <field name="model">odooproyecto.concepto</field>
         <field name="arch" type="xml">
             <tree string="Conceptos de Reparación">
                 <field name="descripcion"/>
@@ -16,7 +16,7 @@
     <!-- Vista Formulario -->
     <record id="view_concepto_form" model="ir.ui.view">
         <field name="name">concepto.form</field>
-        <field name="model">taller.concepto</field>
+        <field name="model">odooproyecto.concepto</field>
         <field name="arch" type="xml">
             <form string="Concepto de Reparación">
                 <sheet>
@@ -34,11 +34,11 @@
     <!-- Acción para acceder al modelo -->
     <record id="action_concepto" model="ir.actions.act_window">
         <field name="name">Conceptos</field>
-        <field name="res_model">taller.concepto</field>
+        <field name="res_model">odooproyecto.concepto</field>
         <field name="view_mode">tree,form</field>
     </record>
 
     <!-- Menú para el modelo -->
-    <menuitem id="menu_taller_root" name="Taller Mecánico"/>
-    <menuitem id="menu_concepto" name="Conceptos de Reparación" parent="menu_taller_root" action="action_concepto"/>
+    <menuitem id="menu_odooproyecto_root" name="Taller Mecánico"/>
+    <menuitem id="menu_concepto" name="Conceptos de Reparación" parent="menu_odooproyecto_root" action="action_concepto"/>
 </odoo>

@@ -1,8 +1,8 @@
 <odoo>
     <!-- Vista de Lista (Tree) para Reparaciones -->
     <record id="view_reparacion_tree" model="ir.ui.view">
-        <field name="name">taller.reparacion.tree</field>
-        <field name="model">taller.reparacion</field>
+        <field name="name">odooproyecto.reparacion.tree</field>
+        <field name="model">odooproyecto.reparacion</field>
         <field name="arch" type="xml">
             <tree>
                 <field name="fecha_ini"/>
@@ -15,8 +15,8 @@
 
     <!-- Vista de Formulario para Reparaciones -->
     <record id="view_reparacion_form" model="ir.ui.view">
-        <field name="name">taller.reparacion.form</field>
-        <field name="model">taller.reparacion</field>
+        <field name="name">odooproyecto.reparacion.form</field>
+        <field name="model">odooproyecto.reparacion</field>
         <field name="arch" type="xml">
             <form string="Reparación">
                 <sheet>
@@ -49,11 +49,11 @@
     <!-- Acción para mostrar las Reparaciones -->
     <record id="action_reparacion" model="ir.actions.act_window">
         <field name="name">Reparaciones</field>
-        <field name="res_model">taller.reparacion</field>
+        <field name="res_model">odooproyecto.reparacion</field>
         <field name="view_mode">tree,form</field>
     </record>
 
     <!-- Menú para acceder a Reparaciones -->
-    <menuitem id="menu_taller_root" name="Taller Mecánico"/>
-    <menuitem id="menu_reparaciones" name="Reparaciones" parent="menu_taller_root" action="action_reparacion"/>
+    <menuitem id="menu_odooproyecto_root" name="Taller Mecánico"/>
+    <menuitem id="menu_reparaciones" name="Reparaciones" parent="menu_odooproyecto_root" action="action_reparacion"/>
 </odoo>
