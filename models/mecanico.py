@@ -1,3 +1,5 @@
+from odoo import models, fields
+
 class Mecanico(models.Model):
     _name = 'odooproyecto.mecanico'
     _description = 'Mecanico'
