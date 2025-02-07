@@ -7,4 +7,4 @@ class Concepto(models.Model):
     descripcion = fields.Char(string="Descripción", required=True)
     precio = fields.Float(string="Precio", required=True)
     mano_obra = fields.Float(string="Mano de Obra", required=True)
-    reparacion_id = fields.Many2one('odooproyecto.reparacion', string="Reparación", required=True, ondelete='cascade')
+    reparacion_id = fields.Many2one('odooproyecto.reparacion', string="Reparación", required=True, ondelete='cascade')dsdsd
