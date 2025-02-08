@@ -1,4 +1,5 @@
 <odoo>
+    <!-- Vista tipo Tree (Lista) -->
     <record id="view_persona_tree" model="ir.ui.view">
         <field name="name">persona.tree</field>
         <field name="model">taller.persona</field>
@@ -9,5 +10,31 @@
                 <field name="correo"/>
             </tree>
         </field>
+    </record>
+
+    <!-- Vista tipo Formulario -->
+    <record id="view_persona_form" model="ir.ui.view">
+        <field name="name">persona.form</field>
+        <field name="model">taller.persona</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="nif"/>
+                        <field name="nombre"/>
+                        <field name="correo"/>
+                        <field name="direccion"/>
+                        <field name="telefono"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Acción para abrir la vista de Persona -->
+    <record id="action_persona_list" model="ir.actions.act_window">
+        <field name="name">Personas</field>
+        <field name="res_model">taller.persona</field>
+        <field name="view_mode">tree,form</field>
     </record>
 </odoo>
