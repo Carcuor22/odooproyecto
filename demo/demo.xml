@@ -1,30 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <data>
-<!--
-          <record id="object0" model="odooproyecto.odooproyecto">
-            <field name="name">Object 0</field>
-            <field name="value">0</field>
-          </record>
+        <!-- Personas -->
+        <record id="persona1" model="taller.persona">
+            <field name="nif">11111111A</field>
+            <field name="nombre">Carlos Fernández</field>
+            <field name="correo">carlos@email.com</field>
+            <field name="direccion">Madrid</field>
+            <field name="telefono">600123456</field>
+        </record>
+        <record id="persona2" model="taller.persona">
+            <field name="nif">22222222B</field>
+            <field name="nombre">Laura Martínez</field>
+            <field name="correo">laura@email.com</field>
+            <field name="direccion">Barcelona</field>
+            <field name="telefono">601234567</field>
+        </record>
+        <record id="persona3" model="taller.persona">
+            <field name="nif">33333333C</field>
+            <field name="nombre">José Ramírez</field>
+            <field name="correo">jose@email.com</field>
+            <field name="direccion">Sevilla</field>
+            <field name="telefono">602345678</field>
+        </record>
+        <record id="persona4" model="taller.persona">
+            <field name="nif">44444444D</field>
+            <field name="nombre">Elena García</field>
+            <field name="correo">elena@email.com</field>
+            <field name="direccion">Bilbao</field>
+            <field name="telefono">603456789</field>
+        </record>
+        <record id="persona5" model="taller.persona">
+            <field name="nif">55555555E</field>
+            <field name="nombre">Marcos López</field>
+            <field name="correo">marcos@email.com</field>
+            <field name="direccion">Valencia</field>
+            <field name="telefono">604567890</field>
+        </record>
+        <record id="persona6" model="taller.persona">
+            <field name="nif">66666666F</field>
+            <field name="nombre">Sandra Torres</field>
+            <field name="correo">sandra@email.com</field>
+            <field name="direccion">Zaragoza</field>
+            <field name="telefono">605678901</field>
+        </record>
 
-          <record id="object1" model="odooproyecto.odooproyecto">
-            <field name="name">Object 1</field>
-            <field name="value">10</field>
-          </record>
+        <!-- Clientes -->
+        <record id="cliente1" model="taller.cliente">
+            <field name="persona_id" ref="persona1"/>
+            <field name="tipo">empresa</field>
+        </record>
+        <record id="cliente2" model="taller.cliente">
+            <field name="persona_id" ref="persona2"/>
+            <field name="tipo">particular</field>
+        </record>
+        <record id="cliente3" model="taller.cliente">
+            <field name="persona_id" ref="persona3"/>
+            <field name="tipo">organismo</field>
+        </record>
+        <record id="cliente4" model="taller.cliente">
+            <field name="persona_id" ref="persona4"/>
+            <field name="tipo">junta</field>
+        </record>
+        <record id="cliente5" model="taller.cliente">
+            <field name="persona_id" ref="persona5"/>
+            <field name="tipo">empresa</field>
+        </record>
+        <record id="cliente6" model="taller.cliente">
+            <field name="persona_id" ref="persona6"/>
+            <field name="tipo">particular</field>
+        </record>
 
-          <record id="object2" model="odooproyecto.odooproyecto">
-            <field name="name">Object 2</field>
-            <field name="value">20</field>
-          </record>
-
-          <record id="object3" model="odooproyecto.odooproyecto">
-            <field name="name">Object 3</field>
-            <field name="value">30</field>
-          </record>
-
-          <record id="object4" model="odooproyecto.odooproyecto">
-            <field name="name">Object 4</field>
-            <field name="value">40</field>
-          </record>
--->
+        <!-- Mecánicos -->
+        <record id="mecanico1" model="taller.mecanico">
+            <field name="persona_id" ref="persona1"/>
+            <field name="especializacion">motor</field>
+            <field name="salario">2500.00</field>
+            <field name="fecha_contratacion">2023-01-15</field>
+        </record>
+        <record id="mecanico2" model="taller.mecanico">
+            <field name="persona_id" ref="persona2"/>
+            <field name="especializacion">electricidad</field>
+            <field name="salario">2200.00</field>
+            <field name="fecha_contratacion">2022-06-10</field>
+        </record>
+        <record id="mecanico3" model="taller.mecanico">
+            <field name="persona_id" ref="persona3"/>
+            <field name="especializacion">carroceria</field>
+            <field name="salario">2300.00</field>
+            <field name="fecha_contratacion">2021-05-20</field>
+        </record>
+        <record id="mecanico4" model="taller.mecanico">
+            <field name="persona_id" ref="persona4"/>
+            <field name="especializacion">diagnostico</field>
+            <field name="salario">2400.00</field>
+            <field name="fecha_contratacion">2023-03-11</field>
+        </record>
+        <record id="mecanico5" model="taller.mecanico">
+            <field name="persona_id" ref="persona5"/>
+            <field name="especializacion">motor</field>
+            <field name="salario">2550.00</field>
+            <field name="fecha_contratacion">2020-07-19</field>
+        </record>
+        <record id="mecanico6" model="taller.mecanico">
+            <field name="persona_id" ref="persona6"/>
+            <field name="especializacion">electricidad</field>
+            <field name="salario">2250.00</field>
+            <field name="fecha_contratacion">2021-11-23</field>
+        </record>
     </data>
 </odoo>

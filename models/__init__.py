@@ -2,5 +2,6 @@
 
 from . import persona
 from . import cliente
+from . import mecanico
 
 

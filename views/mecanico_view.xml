@@ -1,0 +1,74 @@
+<odoo>
+    <!-- Vista tipo Tree (Lista) -->
+    <record id="view_mecanico_tree" model="ir.ui.view">
+        <field name="name">mecanico.tree</field>
+        <field name="model">taller.mecanico</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="nif"/>
+                <field name="nombre"/>
+                <field name="especializacion"/>
+                <field name="salario"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Vista tipo Formulario -->
+    <record id="view_mecanico_form" model="ir.ui.view">
+        <field name="name">mecanico.form</field>
+        <field name="model">taller.mecanico</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="nif"/>
+                        <field name="nombre"/>
+                        <field name="especializacion"/>
+                    </group>
+                    <group>
+                        <field name="salario"/>
+                        <field name="fecha_contratacion"/>
+                    </group>
+                    <group>
+                        <field name="correo"/>
+                        <field name="direccion"/>
+                        <field name="telefono"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+
+   <!-- Vista avanzada tipo Kanban SIN FOTO -->
+    <record id="view_mecanico_kanban" model="ir.ui.view">
+        <field name="name">mecanico.kanban</field>
+        <field name="model">taller.mecanico</field>
+        <field name="arch" type="xml">
+            <kanban>
+                <templates>
+                    <t t-name="kanban-box">
+                        <div class="oe_kanban_global_click">
+                            <strong><field name="nombre"/></strong>
+                            <div><field name="especializacion"/></div>
+                            <div>💰 <field name="salario"/> €/mes</div>
+                            <div>📅 <field name="fecha_contratacion"/></div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
+
+
+    <!-- Acción para abrir la vista de Mecánicos -->
+    <record id="action_mecanico_list" model="ir.actions.act_window">
+        <field name="name">Mecánicos</field>
+        <field name="res_model">taller.mecanico</field>
+        <field name="view_mode">tree,form,kanban</field> <!-- Se agrega kanban -->
+    </record>
+
+    <!-- Menú de Mecánicos -->
+    <menuitem id="taller_menu_mecanicos" name="Mecánicos" parent="taller_menu_root" action="action_mecanico_list"/>
+</odoo>

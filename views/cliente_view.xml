@@ -34,10 +34,22 @@
         </field>
     </record>
 
+    <!-- Vista avanzada tipo Graph -->
+    <record id="view_cliente_graph" model="ir.ui.view">
+        <field name="name">cliente.graph</field>
+        <field name="model">taller.cliente</field>
+        <field name="arch" type="xml">
+            <graph type="bar">
+                <field name="tipo" type="row"/>
+                <field name="id" type="measure"/>
+            </graph>
+        </field>
+    </record>
+
     <!-- Acción para abrir la vista de Cliente -->
     <record id="action_cliente_list" model="ir.actions.act_window">
         <field name="name">Clientes</field>
         <field name="res_model">taller.cliente</field>
-        <field name="view_mode">tree,form</field>
+        <field name="view_mode">tree,form,graph</field> <!-- Se agrega graph -->
     </record>
 </odoo>

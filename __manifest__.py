@@ -11,6 +11,11 @@
         'security/ir.model.access.csv',
         'views/persona_view.xml',
         'views/cliente_view.xml',
+        'views/mecanico_view.xml',
         'views/menu_view.xml',
+    ],
+
+        'demo': [
+        'demo/demo.xml',
     ],
 }

@@ -5,9 +5,9 @@
         <field name="model">taller.persona</field>
         <field name="arch" type="xml">
             <tree>
-                <field name="nif"/>
-                <field name="nombre"/>
-                <field name="correo"/>
+                <field name="nif" />
+                <field name="nombre" />
+                <field name="correo" />
             </tree>
         </field>
     </record>
@@ -20,21 +20,49 @@
             <form>
                 <sheet>
                     <group>
-                        <field name="nif"/>
-                        <field name="nombre"/>
-                        <field name="correo"/>
-                        <field name="direccion"/>
-                        <field name="telefono"/>
+                        <field name="nif" />
+                        <field name="nombre" />
+                        <field name="correo" />
+                        <field name="direccion" />
+                        <field name="telefono" />
                     </group>
                 </sheet>
             </form>
         </field>
     </record>
 
-    <!-- Acción para abrir la vista de Persona -->
+    <!-- Vista avanzada tipo Kanban -->
+    <record id="view_persona_kanban" model="ir.ui.view">
+        <field name="name">persona.kanban</field>
+        <field name="model">taller.persona</field>
+        <field name="arch" type="xml">
+            <kanban>
+                <templates>
+                    <t t-name="kanban-box">
+                        <div class="oe_kanban_global_click">
+                            <strong>
+                                <field name="nombre" />
+                            </strong>
+                            <div>
+                                <field name="correo" />
+                            </div>
+                            <div>
+                                <field name="direccion" />
+                            </div>
+                            <div>
+                                <field name="telefono" />
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
+    <!-- Acción para abrir la vista de Personas -->
     <record id="action_persona_list" model="ir.actions.act_window">
         <field name="name">Personas</field>
         <field name="res_model">taller.persona</field>
-        <field name="view_mode">tree,form</field>
+        <field name="view_mode">tree,form,kanban</field> <!-- Se agrega kanban -->
     </record>
 </odoo>
