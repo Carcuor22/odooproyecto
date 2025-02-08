@@ -2,6 +2,8 @@
 "access_taller_persona_user","Acceso Usuario Persona","model_taller_persona","base.group_user",1,0,0,0
 "access_taller_cliente_user","Acceso Usuario Cliente","model_taller_cliente","base.group_user",1,0,0,0
 "access_taller_mecanico_user","Acceso Usuario Mecanico","model_taller_mecanico","base.group_user",1,0,0,0
+"access_taller_reparacion_user","Acceso Usuario Reparacion","model_taller_reparacion","base.group_user",1,0,0,0
 "access_taller_persona_admin","Acceso Admin Persona","model_taller_persona","base.group_system",1,1,1,1
 "access_taller_cliente_admin","Acceso Admin Cliente","model_taller_cliente","base.group_system",1,1,1,1
 "access_taller_mecanico_admin","Acceso Admin Mecanico","model_taller_mecanico","base.group_system",1,1,1,1
+"access_taller_reparacion_admin","Acceso Admin Reparacion","model_taller_reparacion","base.group_system",1,1,1,1

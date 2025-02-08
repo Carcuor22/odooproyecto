@@ -1,0 +1,57 @@
+<odoo>
+    <!-- Vista tipo Tree (Lista) -->
+    <record id="view_reparacion_tree" model="ir.ui.view">
+        <field name="name">reparacion.tree</field>
+        <field name="model">taller.reparacion</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="id_reparacion"/>
+                <field name="fecha_ini"/>
+                <field name="fecha_fin"/>
+                <field name="total"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Vista tipo Formulario -->
+    <record id="view_reparacion_form" model="ir.ui.view">
+        <field name="name">reparacion.form</field>
+        <field name="model">taller.reparacion</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="id_reparacion"/>
+                        <field name="fecha_ini"/>
+                        <field name="fecha_fin"/>
+                        <field name="total"/>
+                        <field name="descripcion"/>
+                        <field name="mecanicos_ids" widget="many2many_tags"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Vista avanzada tipo Calendar -->
+    <record id="view_reparacion_calendar" model="ir.ui.view">
+        <field name="name">reparacion.calendar</field>
+        <field name="model">taller.reparacion</field>
+        <field name="arch" type="xml">
+            <calendar date_start="fecha_ini" date_stop="fecha_fin">
+                <field name="id_reparacion"/>
+                <field name="descripcion"/>
+            </calendar>
+        </field>
+    </record>
+
+    <!-- Acción para abrir la vista de Reparaciones -->
+    <record id="action_reparacion_list" model="ir.actions.act_window">
+        <field name="name">Reparaciones</field>
+        <field name="res_model">taller.reparacion</field>
+        <field name="view_mode">tree,form,calendar</field>
+    </record>
+
+    <!-- Menú de Reparaciones -->
+    <menuitem id="taller_menu_reparaciones" name="Reparaciones" parent="taller_menu_root" action="action_reparacion_list"/>
+</odoo>

@@ -108,5 +108,54 @@
             <field name="salario">2250.00</field>
             <field name="fecha_contratacion">2021-11-23</field>
         </record>
+        <!-- Reparaciones -->
+        <record id="reparacion1" model="taller.reparacion">
+            <field name="id_reparacion">1</field>
+            <field name="fecha_ini">2024-01-10 08:30:00</field>
+            <field name="fecha_fin">2024-01-11 17:00:00</field>
+            <field name="total">450.00</field>
+            <field name="descripcion">Cambio de frenos y alineación.</field>
+            <field name="mecanicos_ids" eval="[(6, 0, [ref('mecanico1'), ref('mecanico2')])]"/>
+        </record>
+        <record id="reparacion2" model="taller.reparacion">
+            <field name="id_reparacion">2</field>
+            <field name="fecha_ini">2024-02-15 09:00:00</field>
+            <field name="fecha_fin">2024-02-16 15:00:00</field>
+            <field name="total">300.00</field>
+            <field name="descripcion">Cambio de aceite y filtro.</field>
+            <field name="mecanicos_ids" eval="[(6, 0, [ref('mecanico3')])]"/>
+        </record>
+        <record id="reparacion3" model="taller.reparacion">
+            <field name="id_reparacion">3</field>
+            <field name="fecha_ini">2024-03-20 10:00:00</field>
+            <field name="fecha_fin">2024-03-21 12:00:00</field>
+            <field name="total">500.00</field>
+            <field name="descripcion">Reparación de motor.</field>
+            <field name="mecanicos_ids" eval="[(6, 0, [ref('mecanico4'), ref('mecanico5')])]"/>
+        </record>
+        <record id="reparacion4" model="taller.reparacion">
+            <field name="id_reparacion">4</field>
+            <field name="fecha_ini">2024-04-05 08:00:00</field>
+            <field name="fecha_fin">2024-04-05 14:00:00</field>
+            <field name="total">250.00</field>
+            <field name="descripcion">Pintura y retoques.</field>
+            <field name="mecanicos_ids" eval="[(6, 0, [ref('mecanico6')])]"/>
+        </record>
+        <record id="reparacion5" model="taller.reparacion">
+            <field name="id_reparacion">5</field>
+            <field name="fecha_ini">2024-05-10 11:30:00</field>
+            <field name="fecha_fin">2024-05-11 16:00:00</field>
+            <field name="total">700.00</field>
+            <field name="descripcion">Sustitución de caja de cambios.</field>
+            <field name="mecanicos_ids" eval="[(6, 0, [ref('mecanico2'), ref('mecanico5')])]"/>
+        </record>
+        <record id="reparacion6" model="taller.reparacion">
+            <field name="id_reparacion">6</field>
+            <field name="fecha_ini">2024-06-01 07:45:00</field>
+            <field name="fecha_fin">2024-06-02 13:30:00</field>
+            <field name="total">550.00</field>
+            <field name="descripcion">Reparación del sistema eléctrico.</field>
+            <field name="mecanicos_ids" eval="[(6, 0, [ref('mecanico3'), ref('mecanico4')])]"/>
+        </record>
     </data>
 </odoo>

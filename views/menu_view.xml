@@ -11,6 +11,9 @@
     <!-- Submenú Mecánicos -->
     <menuitem id="taller_menu_mecanicos" name="Mecánicos" parent="taller_menu_root" action="action_mecanico_list"/>
 
+    <!-- Submenú Reparaciones -->
+    <menuitem id="taller_menu_reparaciones" name="Reparaciones" parent="taller_menu_root" action="action_reparacion_list"/>
+
     <!-- Acción para Personas -->
     <record id="action_persona_list" model="ir.actions.act_window">
         <field name="name">Personas</field>
@@ -30,5 +33,12 @@
         <field name="name">Mecánicos</field>
         <field name="res_model">taller.mecanico</field>
         <field name="view_mode">tree,form,kanban</field>
+    </record>
+
+    <!-- Acción para Reparaciones -->
+    <record id="action_reparacion_list" model="ir.actions.act_window">
+        <field name="name">Reparaciones</field>
+        <field name="res_model">taller.reparacion</field>
+        <field name="view_mode">tree,form,calendar</field>
     </record>
 </odoo>
