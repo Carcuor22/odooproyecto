@@ -64,9 +64,13 @@
 
     <!-- Acción para abrir la vista de Mecánicos -->
     <record id="action_mecanico_list" model="ir.actions.act_window">
-        <field name="name">Mecánicos</field>
+        <field name="name">Mecanicos</field>
         <field name="res_model">taller.mecanico</field>
         <field name="view_mode">tree,form,kanban</field> <!-- Se agrega kanban -->
     </record>
 
+<<<<<<< HEAD
+=======
+   
+>>>>>>> 7de222faf8e07dcb12968626162e21fa40ab1f73
 </odoo>
