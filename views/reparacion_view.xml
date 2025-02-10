@@ -52,6 +52,4 @@
         <field name="view_mode">tree,form,calendar</field>
     </record>
 
-    <!-- Menú de Reparaciones -->
-    <menuitem id="taller_menu_reparaciones" name="Reparaciones" parent="taller_menu_root" action="action_reparacion_list"/>
 </odoo>

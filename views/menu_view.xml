@@ -14,6 +14,9 @@
     <!-- Submenú Reparaciones -->
     <menuitem id="taller_menu_reparaciones" name="Reparaciones" parent="taller_menu_root" action="action_reparacion_list"/>
 
+    <!-- Submenú Vehículos -->
+    <menuitem id="taller_menu_vehiculos" name="Vehículos" parent="taller_menu_root" action="action_vehiculo_list"/>
+
     <!-- Acción para Personas -->
     <record id="action_persona_list" model="ir.actions.act_window">
         <field name="name">Personas</field>
@@ -40,5 +43,12 @@
         <field name="name">Reparaciones</field>
         <field name="res_model">taller.reparacion</field>
         <field name="view_mode">tree,form,calendar</field>
+    </record>
+
+    <!-- Acción para Vehículos -->
+    <record id="action_vehiculo_list" model="ir.actions.act_window">
+        <field name="name">Vehículos</field>
+        <field name="res_model">taller.vehiculo</field>
+        <field name="view_mode">tree,form,gantt</field>
     </record>
 </odoo>

@@ -1,0 +1,58 @@
+<odoo>
+    <!-- Vista tipo Tree (Lista) -->
+    <record id="view_vehiculo_tree" model="ir.ui.view">
+        <field name="name">vehiculo.tree</field>
+        <field name="model">taller.vehiculo</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="matricula"/>
+                <field name="marca"/>
+                <field name="modelo"/>
+                <field name="motor"/>
+                <field name="cliente_id"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Vista tipo Formulario -->
+    <record id="view_vehiculo_form" model="ir.ui.view">
+        <field name="name">vehiculo.form</field>
+        <field name="model">taller.vehiculo</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="matricula"/>
+                        <field name="marca"/>
+                        <field name="modelo"/>
+                        <field name="motor"/>
+                    </group>
+                    <group>
+                        <field name="cliente_id"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Vista avanzada tipo Gantt -->
+    <record id="view_vehiculo_gantt" model="ir.ui.view">
+        <field name="name">vehiculo.gantt</field>
+        <field name="model">taller.vehiculo</field>
+        <field name="arch" type="xml">
+            <gantt date_start="matricula">
+                <field name="marca"/>
+                <field name="modelo"/>
+                <field name="cliente_id"/>
+            </gantt>
+        </field>
+    </record>
+
+    <!-- Acción para abrir la vista de Vehículos -->
+    <record id="action_vehiculo_list" model="ir.actions.act_window">
+        <field name="name">Vehículos</field>
+        <field name="res_model">taller.vehiculo</field>
+        <field name="view_mode">tree,form,gantt</field>
+    </record>
+
+</odoo>
