@@ -5,6 +5,12 @@
     <!-- Submenú Personas -->
     <menuitem id="taller_menu_personas" name="Personas" parent="taller_menu_root" action="action_persona_list"/>
 
+ <!-- Menú de Mecánicos -->
+    <menuitem id="taller_menu_mecanicos" name="Mecanicos" parent="taller_menu_root" action="action_mecanico_list"/>
+
+     <!-- Menú de Reparaciones -->
+    <menuitem id="taller_menu_reparaciones" name="Reparaciones" parent="taller_menu_root" action="action_reparacion_list"/>
+    
     <!-- Submenú Clientes -->
     <menuitem id="taller_menu_clientes" name="Clientes" parent="taller_menu_root" action="action_cliente_list"/>
 
