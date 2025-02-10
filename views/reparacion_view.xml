@@ -51,9 +51,5 @@
         <field name="res_model">taller.reparacion</field>
         <field name="view_mode">tree,form,calendar</field>
     </record>
-
-<<<<<<< HEAD
-=======
-   
->>>>>>> 3b9470fa8ae04f6c5d013781e7e3c64d21c63396
+a
 </odoo>
