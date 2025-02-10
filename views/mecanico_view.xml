@@ -69,8 +69,5 @@
         <field name="view_mode">tree,form,kanban</field> <!-- Se agrega kanban -->
     </record>
 
-<<<<<<< HEAD
-=======
    
->>>>>>> 7de222faf8e07dcb12968626162e21fa40ab1f73
 </odoo>
