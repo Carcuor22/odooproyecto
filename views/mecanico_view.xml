@@ -69,6 +69,4 @@
         <field name="view_mode">tree,form,kanban</field> <!-- Se agrega kanban -->
     </record>
 
-    <!-- Menú de Mecánicos -->
-    <menuitem id="taller_menu_mecanicos" name="Mecánicos" parent="taller_menu_root" action="action_mecanico_list"/>
 </odoo>
